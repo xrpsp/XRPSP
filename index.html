@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Download PPSSPP Games - ISO Files</title>
-  <meta name="description" content="Download PPSSPP Games - ISO Files">
+  <title>XRpsp PPSSPP - Download PPSSPP Games & Mobile Games MOD</title>
+  <meta name="description" content="Download the latest PPSSPP and MOD mobile games for Android and iOS. Easy navigation, search, and direct download. XRpsp: Your home for mobile gaming!">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:image" content="https://i.postimg.cc/8k0Bvx2n/bf63d212-acd6-4471-ab5d-a41c0961fc43.jpg">
-  <meta property="og:title" content="Download PPSSPP Games - ISO Files">
+  <meta property="og:title" content="XRpsp PPSSPP - PPSSPP & MOD Games Download">
   <meta property="og:description" content="Find and download the best PPSSPP and MOD games for your mobile. Fast, easy and safe.">
   <link rel="icon" href="https://i.postimg.cc/8k0Bvx2n/bf63d212-acd6-4471-ab5d-a41c0961fc43.jpg">
   <style>
@@ -175,10 +175,18 @@
       border: 2px solid #2a2e41;
       transition: box-shadow .17s;
     }
+    /* مستطيل عمودي */
     .game-img-ppsspp {
       aspect-ratio: 9/16;
       height: auto;
       max-height: 260px;
+      min-height: 0;
+    }
+    /* صور ألعاب MOD مربعة */
+    .game-img-mod {
+      aspect-ratio: 1/1;
+      height: auto;
+      max-height: 180px;
       min-height: 0;
     }
     .game-name {
@@ -301,76 +309,6 @@
     ::-webkit-scrollbar { width: 12px; background: #23273a;}
     ::-webkit-scrollbar-thumb { background: #262a3b; border-radius: 10px;}
     ::-webkit-scrollbar-thumb:hover { background: #ff900055;}
-    /* Modal Styles */
-    #downloadModal {
-      position: fixed; top:0; left:0; width:100vw; height:100vh; z-index:2000;
-      display: flex; align-items: center; justify-content: center;
-    }
-    #downloadModal .modal-bg {
-      position: absolute; top:0; left:0; width:100vw; height:100vh;
-      background: rgba(20,22,35,0.75);
-      z-index: 1;
-    }
-    #downloadModal .modal-content {
-      position: relative;
-      background: #23273a;
-      border-radius: 20px;
-      box-shadow: 0 8px 40px #0008;
-      padding: 38px 28px 28px 28px;
-      z-index: 2;
-      min-width: 330px;
-      max-width: 94vw;
-      animation: popin .5s;
-    }
-    .close-modal {
-      position: absolute; top: 13px; right: 15px;
-      background: none; border: none; color: #fff;
-      font-size: 1.7rem; cursor:pointer; opacity:.78;
-      transition: color .2s;
-    }
-    .close-modal:hover { color: #ff9000; }
-    .processing-btn {
-      background: #ff9000; color:#fff; border:none; border-radius:9px; padding:8px 22px;
-      font-size: 1.05rem; font-weight:700; margin-bottom:13px; opacity:.82;
-      cursor: not-allowed;
-    }
-    .spinner {
-      border: 5px solid #f3f3f3;
-      border-top: 5px solid #ff9000;
-      border-radius: 50%;
-      width: 44px; height: 44px;
-      animation: spin 0.8s linear infinite;
-      margin: 0 auto 13px auto;
-    }
-    @keyframes spin {
-      0% {transform: rotate(0deg);}
-      100% {transform: rotate(360deg);}
-    }
-    .progress-bar-wrap {
-      width: 100%; background: #262a3b;
-      border-radius: 8px; height: 18px; position: relative; margin-bottom: 13px;
-      box-shadow: 0 2px 12px #0003;
-    }
-    .progress-bar {
-      height: 100%; background: #ff9000;
-      border-radius: 8px 0 0 8px; width: 0%;
-      transition: width 0.35s;
-    }
-    .progress-label {
-      position: absolute; right: 11px; top: 0; height: 100%;
-      color: #fff; font-size: .97rem; display: flex; align-items: center;
-    }
-    .download-steps {
-      list-style: none; padding: 0; margin: 0 0 0 0;
-    }
-    .download-steps li {
-      font-size: 1rem; color: #bfc7d5; margin-bottom: 7px; display: flex; align-items: center;
-    }
-    .step-mark {
-      display: inline-block; width: 22px; height: 22px; margin-left: 7px;
-      font-size: 1.06rem; color: #ff9000;
-    }
-    #modal-verify .download-btn { width: 170px; margin-top: 14px; }
   </style>
 </head>
 <body>
@@ -381,6 +319,7 @@
     </div>
     <nav>
       <button id="tab-ppsspp" class="active">PPSSPP</button>
+      <button id="tab-mod">MOD</button>
     </nav>
     </header>
 
@@ -400,47 +339,19 @@
   <footer>
     <div class="footer-links">
       <button id="footer-ppsspp" class="active">PPSSPP</button>
+      <button id="footer-mod">MOD</button>
     </div>
     <div id="footnote"></div>
     <div style="margin-top: 5px; font-size: .97rem; opacity:.77;">
       &copy; 2025 XRpsp. All rights reserved.
     </div>
     <div style="margin-top:7px;">
-      <a class="instagram-link" href="https://instagram.com/skurtt2.0" target="_blank" rel="noopener noreferrer">
+      <a class="instagram-link" href="https://instagram.com/xrpsp_games" target="_blank" rel="noopener noreferrer">
         <svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:middle"><path fill="#fff" d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 2.75a5.75 5.75 0 1 1 0 11.5a5.75 5.75 0 0 1 0-11.5zm0 1.5a4.25 4.25 0 1 0 0 8.5a4.25 4.25 0 0 0 0-8.5zm6.13.98a1.13 1.13 0 1 1-2.26 0a1.13 1.13 0 0 1 2.26 0z"></path></svg>
         @xrpsp
       </a>
     </div>
   </footer>
-
-  <!-- Modal for Download -->
-  <div id="downloadModal" style="display:none;">
-    <div class="modal-bg"></div>
-    <div class="modal-content">
-      <button class="close-modal" onclick="closeDownloadModal()" title="Close">&times;</button>
-      <div id="modal-processing">
-        <button class="processing-btn" disabled>Processing...</button>
-        <div class="spinner"></div>
-        <div class="progress-bar-wrap">
-          <div class="progress-bar" id="progressBar"></div>
-          <div class="progress-label" id="progressLabel">0%</div>
-        </div>
-        <ul class="download-steps">
-          <li id="step1">Loading PSP game data <span class="step-mark" id="mark1"></span></li>
-          <li id="step2">Checking PPSSPP compatibility <span class="step-mark" id="mark2"></span></li>
-          <li id="step3">Activating performance tweaks <span class="step-mark" id="mark3"></span></li>
-          <li id="step4">Finalizing PPSSPP setup <span class="step-mark" id="mark4"></span></li>
-        </ul>
-      </div>
-      <div id="modal-verify" style="display:none; text-align:center;">
-        <div style="font-size:1.15rem; margin-bottom:13px; color:#ff9000;">
-            Almost there! Complete the final step to unlock your PPSSPP game.
-
-        </div>
-        <button id="verifyNowBtn" class="download-btn" style="animation:none;">Unlock & Verify</button>
-      </div>
-    </div>
-  </div>
 
   <script>
     // ----------- Data -----------
@@ -569,7 +480,7 @@
             year: 2007
           }
         ],
-        // Page 2
+        // Page 2 (نماذج مختارة للأوصاف والسنة)
         [
           {
             name: "Metal Gear Solid – Peace Walker",
@@ -692,7 +603,7 @@
             year: 2006
           }
         ],
-        // Page 3
+        // Page 3 (نموذج مع أوصاف)
         [
           {
             name: "Crash of the Titans",
@@ -815,7 +726,7 @@
             year: 2006
           }
         ],
-        // Page 4
+        // Page 4 (يمكنك إضافة أوصاف وسنة لباقي الألعاب بنفس النمط)
         [
           {
             name: "Soul Calibur Broken Destiny",
@@ -938,7 +849,157 @@
             year: 2006
           }
         ],
-        // Page 5 (تحت التطوير)
+        // Page 5 (ملاحظة التطوير)
+        []
+      ],
+      MOD: [
+        [
+          {
+            name: "Gta san andreas (mod)",
+            img: "https://i.postimg.cc/TPJVGjpL/unnamed-5.png",
+            desc: "Open-world action game set in San Andreas, here as a mobile mod version.",
+            year: 2004
+          },
+          {
+            name: "Gta vice city (mod)",
+            img: "https://i.postimg.cc/6pRVbxKh/unnamed-6.png",
+            desc: "Classic 80s Miami open-world action, now modded for mobile.",
+            year: 2002
+          },
+          {
+            name: "Bully",
+            img: "https://i.postimg.cc/Bn1NW1TH/unnamed-8.png",
+            desc: "Schoolyard open-world adventure from Rockstar, now modded.",
+            year: 2006
+          },
+          {
+            name: "Gta iii (mod)",
+            img: "https://i.postimg.cc/J76QGQKj/unnamed-7.png",
+            desc: "The classic Liberty City open-world crime game, modded for mobile.",
+            year: 2001
+          },
+          {
+            name: "Minecraft",
+            img: "https://i.postimg.cc/tJ0n5dp0/unnamed-3.png",
+            desc: "The classic sandbox building and survival game, with mods.",
+            year: 2011
+          },
+          {
+            name: "Roblox",
+            img: "https://i.postimg.cc/gJx34khh/unnamed.webp",
+            desc: "Online platform for user-created games, with mobile mods.",
+            year: 2006
+          },
+          {
+            name: "Baseball 9 (mod)",
+            img: "https://i.postimg.cc/8zPDtNM2/baseball9.png",
+            desc: "Arcade-style baseball game with modded features.",
+            year: 2018
+          },
+          {
+            name: "Subway surfers (mod)",
+            img: "https://i.postimg.cc/8zkJtzQC/unnamed-5.png",
+            desc: "Endless runner game with modded enhancements.",
+            year: 2012
+          },
+          {
+            name: "Grid autosport",
+            img: "https://i.postimg.cc/NfCPvcWq/unnamed-4.png",
+            desc: "Realistic racing simulation with console-quality graphics.",
+            year: 2014
+          },
+          {
+            name: "Monopoly go!",
+            img: "https://i.postimg.cc/pV8FdSJP/unnamed-4.png",
+            desc: "Modern mobile version of the classic Monopoly game.",
+            year: 2023
+          },
+          {
+            name: "Hungry shark (mod)",
+            img: "https://i.postimg.cc/kgbNY68Z/unnamed-9.png",
+            desc: "Eat, grow, and survive as a shark in this modded arcade adventure.",
+            year: 2010
+          },
+          {
+            name: "Payback 2 (mod)",
+            img: "https://i.postimg.cc/FRmxLrY6/unnamed-10.png",
+            desc: "Action-packed sandbox game with modded content.",
+            year: 2014
+          },
+          {
+            name: "Into the dead 2 (mod)",
+            img: "https://i.postimg.cc/x1JgrFr6/unnamed-11.png",
+            desc: "Survive the zombie apocalypse in this modded runner-shooter.",
+            year: 2017
+          },
+          {
+            name: "Asphalt 8 (mod)",
+            img: "https://i.postimg.cc/5tzPzKnX/unnamed-12.png",
+            desc: "High-speed arcade racing, now with mod features.",
+            year: 2013
+          },
+          {
+            name: "Stardew valley",
+            img: "https://i.postimg.cc/85dn2rVt/images.jpg",
+            desc: "Farming and life simulation with pixel-art charm.",
+            year: 2016
+          },
+          {
+            name: "Pokemon go",
+            img: "https://i.postimg.cc/L6tLxWJx/unnamed-2.png",
+            desc: "Augmented reality adventure to catch Pokémon in the real world.",
+            year: 2016
+          },
+          {
+            name: "Royal match",
+            img: "https://i.postimg.cc/7Y8SM4ZC/unnamed-1.png",
+            desc: "Match-3 puzzle game with royal themes and modded extras.",
+            year: 2021
+          },
+          {
+            name: "Bloons td 6",
+            img: "https://i.postimg.cc/2ywMZLcV/unnamed-3.png",
+            desc: "Strategic tower defense game, now with modded features.",
+            year: 2018
+          },
+          {
+            name: "Dead cells",
+            img: "https://i.postimg.cc/RVSjzGhf/unnamed-2.png",
+            desc: "Roguelike action platformer with modded content.",
+            year: 2018
+          },
+          {
+            name: "Alto's odyssey",
+            img: "https://i.postimg.cc/65MF6R4P/unnamed-1.png",
+            desc: "Beautiful endless runner through scenic landscapes.",
+            year: 2018
+          },
+          {
+            name: "Geometry dash",
+            img: "https://i.postimg.cc/HLyNthvG/unnamed.png",
+            desc: "Fast-paced rhythm platformer, now modded.",
+            year: 2013
+          },
+          {
+            name: "Coin master",
+            img: "https://i.postimg.cc/6pBRghRt/unnamed.jpg",
+            desc: "Casual slot and village building game with modded features.",
+            year: 2015
+          },
+          {
+            name: "Soul knight",
+            img: "https://i.postimg.cc/XYZ1VPbZ/unnamed.jpg",
+            desc: "Dungeon crawler shooter with modded content.",
+            year: 2017
+          },
+          {
+            name: "Candy crush saga",
+            img: "https://i.postimg.cc/NFTmqJpf/unnamed.png",
+            desc: "The legendary match-3 puzzle game, now modded.",
+            year: 2012
+          }
+        ],
+        // Page 7 (ملاحظة التطوير)
         []
       ]
     };
@@ -950,10 +1011,10 @@
     const downloadUrl = "https://mediafire.store/";
 
     function getPageRange(tab) {
-      return [1,5];
+      return tab === 'PPSSPP' ? [1,5] : [6,7];
     }
     function getGamesForView() {
-      let idx = currentPage-1;
+      let idx = (currentTab === "PPSSPP") ? currentPage-1 : currentPage-6;
       let games = gamesData[currentTab][idx] || [];
       if (!searchQuery.trim()) return games;
       const q = searchQuery.trim().toLowerCase();
@@ -963,10 +1024,15 @@
       const gameGrid = document.getElementById('game-grid');
       let games = getGamesForView();
       gameGrid.innerHTML = '';
-      if (currentTab === "PPSSPP" && currentPage === 5) {
+      if (
+        (currentTab === "PPSSPP" && currentPage === 5) ||
+        (currentTab === "MOD" && currentPage === 7)
+      ) {
         let note = document.createElement('div');
         note.className = "dev-note";
-        note.textContent = "This site is still under development. More PPSSPP games will be available soon!";
+        note.textContent = currentTab === "PPSSPP"
+          ? "This site is still under development. More PPSSPP games will be available soon!"
+          : "This site is still under development. More MOD games will be available soon!";
         gameGrid.appendChild(note);
         return;
       }
@@ -980,13 +1046,13 @@
       for (let g of games) {
         let c = document.createElement('div');
         c.className = "game-card";
-        let imgClass = "game-img game-img-ppsspp";
+        let imgClass = currentTab === "PPSSPP" ? "game-img game-img-ppsspp" : "game-img game-img-mod";
         c.innerHTML = `
           <img class="${imgClass}" src="${g.img}" alt="${g.name}">
           <div class="game-name">${g.name}</div>
           <div class="game-desc">${g.desc ? g.desc : ''}</div>
           <div class="game-year">${g.year ? 'Release: ' + g.year : ''}</div>
-          <button class="download-btn" onclick="openDownloadModal()">Download</button>
+          <a class="download-btn" href="${downloadUrl}" target="_blank" rel="noopener">Download</a>
         `;
         gameGrid.appendChild(c);
       }
@@ -1010,13 +1076,19 @@
     }
     function renderFooterLinks() {
       document.getElementById('footer-ppsspp').classList.toggle('active', currentTab === 'PPSSPP');
+      document.getElementById('footer-mod').classList.toggle('active', currentTab === 'MOD');
     }
     function renderHeaderTabs() {
       document.getElementById('tab-ppsspp').classList.toggle('active', currentTab === 'PPSSPP');
+      document.getElementById('tab-mod').classList.toggle('active', currentTab === 'MOD');
     }
     function renderFootnote() {
       let fn = document.getElementById('footnote');
-      fn.innerHTML = "Browse the best PPSSPP games for Android, download and play now!";
+      if (currentTab === "PPSSPP") {
+        fn.innerHTML = "Browse the best PPSSPP games for Android, download and play now!";
+      } else {
+        fn.innerHTML = "Discover top MOD and modded games for Android, all in one place!";
+      }
     }
     function renderAll() {
       renderHeaderTabs();
@@ -1049,7 +1121,7 @@
     function navigateToTab(tab) {
       if (currentTab === tab) return;
       currentTab = tab;
-      currentPage = 1;
+      currentPage = tab === 'PPSSPP' ? 1 : 6;
       searchQuery = '';
       document.getElementById('search').value = '';
       pushHistory(currentTab, currentPage, searchQuery);
@@ -1065,12 +1137,14 @@
     }
     function handleSearchInput(val) {
       searchQuery = val;
-      currentPage = 1;
+      currentPage = currentTab === "PPSSPP" ? 1 : 6;
       pushHistory(currentTab, currentPage, searchQuery);
       renderAll();
     }
     document.getElementById('tab-ppsspp').onclick = () => navigateToTab('PPSSPP');
+    document.getElementById('tab-mod').onclick = () => navigateToTab('MOD');
     document.getElementById('footer-ppsspp').onclick = () => navigateToTab('PPSSPP');
+    document.getElementById('footer-mod').onclick = () => navigateToTab('MOD');
     document.getElementById('search').addEventListener('input', e => {
       handleSearchInput(e.target.value);
     });
@@ -1091,56 +1165,6 @@
         img.setAttribute('loading', 'lazy');
       });
     });
-
-    // Modal Download
-    function openDownloadModal() {
-      document.getElementById('downloadModal').style.display = 'flex';
-      document.getElementById('modal-processing').style.display = 'block';
-      document.getElementById('modal-verify').style.display = 'none';
-      let progress = 0;
-      const progressBar = document.getElementById('progressBar');
-      const progressLabel = document.getElementById('progressLabel');
-      progressBar.style.width = '0%';
-      progressLabel.textContent = '0%';
-      for (let i = 1; i <= 4; i++) {
-        document.getElementById('mark'+i).innerHTML = '';
-        document.getElementById('step'+i).style.color = '#bfc7d5';
-      }
-      const steps = [
-        { t: 0, idx: 1 },
-        { t: 2.5, idx: 2 },
-        { t: 5.0, idx: 3 },
-        { t: 7.5, idx: 4 },
-      ];
-      let interval;
-      let startTime = Date.now();
-      interval = setInterval(() => {
-        let elapsed = (Date.now() - startTime) / 1000;
-        progress = Math.min(100, Math.floor((elapsed/10)*100));
-        progressBar.style.width = progress + '%';
-        progressLabel.textContent = progress + '%';
-        for (let step of steps) {
-          if (elapsed >= step.t) {
-            document.getElementById('mark'+step.idx).innerHTML = '✔️';
-            document.getElementById('step'+step.idx).style.color = '#ff9000';
-          }
-        }
-        if (progress >= 100) {
-          clearInterval(interval);
-          setTimeout(() => {
-            document.getElementById('modal-processing').style.display = 'none';
-            document.getElementById('modal-verify').style.display = 'block';
-          }, 500);
-        }
-      }, 100);
-      document.getElementById('verifyNowBtn').onclick = function() {
-        window.open(downloadUrl, "_blank");
-        closeDownloadModal();
-      };
-    }
-    function closeDownloadModal() {
-      document.getElementById('downloadModal').style.display = 'none';
-    }
   </script>
 </body>
 </html>
