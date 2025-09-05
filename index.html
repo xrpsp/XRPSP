@@ -29,6 +29,7 @@
       align-items: flex-start;
       box-shadow: 0 2px 18px 0 rgba(33,150,243,0.13);
       z-index: 3;
+      position: relative;
     }
     .logo-wrap {
       margin-left: 18px;
@@ -38,12 +39,13 @@
       gap: 2px;
     }
     .main-logo {
-      width: 38px;
-      height: 38px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 1px 6px 0 rgba(0,0,0,.13);
-      border: 2px solid var(--main-blue);
+      border: 2.5px solid var(--main-blue);
+      background: #fff;
     }
     .header-title {
       margin-top: 4px;
@@ -57,6 +59,49 @@
       letter-spacing: 0.4px;
       box-shadow: 0 1px 6px 0 rgba(0,0,0,0.10);
       user-select: none;
+    }
+    /* بطاقة PPSSPP */
+    .ppsspp-header-card {
+      position: absolute;
+      top: 8px;
+      right: 22px;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(130deg, #2162f3 70%, #1ec7e6 100%);
+      border-radius: 50%;
+      box-shadow: 0 2px 16px #2196f333, 0 1px 8px #000b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 12;
+      transition: box-shadow .19s, transform .18s;
+      border: 2.5px solid #fff;
+      overflow: hidden;
+    }
+    .ppsspp-header-card:hover {
+      box-shadow: 0 4px 32px #1ec7e677, 0 2px 18px #2196f399;
+      transform: scale(1.09) rotate(-1deg);
+    }
+    .ppsspp-header-card img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+    }
+    @media (max-width:600px) {
+      .main-logo { width: 35px; height: 35px; border-width: 1.5px; }
+      .ppsspp-header-card {
+        width: 35px;
+        height: 35px;
+        top: 7px;
+        right: 8px;
+        border-width: 1.5px;
+      }
+      .ppsspp-header-card img { width: 21px; height: 21px; }
+      .header-title { font-size: 0.85rem; }
+      .logo-wrap { margin-left: 8px; }
     }
     .games-grid {
       display: grid;
@@ -297,6 +342,10 @@
   </style>
 </head>
 <body>
+  <!-- بطاقة PPSSPP أعلى يمين الهيدر -->
+  <div class="ppsspp-header-card" onclick="window.location.href='ppsspp.html'" title="ألعاب PPSSPP">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PPSSPP_logo.svg/1200px-PPSSPP_logo.svg.png" alt="PPSSPP Logo">
+  </div>
   <!-- Header -->
   <div class="header">
     <div class="logo-wrap">
