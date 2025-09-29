@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>XRPSP Mobile Games - Page 2</title>
+
+  <!-- Favicon (logo used as favicon / social preview) -->
+  <link rel="icon" href="https://iili.io/KGuQljI.png" type="image/png">
+  <meta name="keywords" content="Minecraft, Roblox, Subway Surfer, Free Fire, Pubg, Gta San Andreas, FIFA, eFootball">
+  <meta property="og:image" content="https://iili.io/KGuQljI.png">
+  <meta property="og:image:type" content="image/png">
+
+  <!-- Tailwind + Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* bold everywhere as requested */
+    body { font-weight: 700; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+    /* modal backdrop transparency (50%) */
+    .modal-backdrop { background: rgba(0,0,0,0.5); }
+
+    /* modal box default (hidden state) and transition */
+    .modal-box {
+      transform: scale(.95);
+      opacity: 0;
+      transition: transform 220ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
+    }
+    .modal-box.show {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    /* small helper for search hide */
+    .game-card { transition: opacity 160ms ease, transform 160ms ease; }
+    .game-card.hidden-by-search { opacity: 0; transform: translateY(6px); pointer-events: none; height: 0; margin: 0; padding: 0; overflow: hidden; }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen">
+
+  <div class="max-w-6xl mx-auto px-4 py-6">
+    <!-- Header (logo left of title) -->
+    <header class="flex items-center gap-3 justify-center mb-6">
+      <img src="https://iili.io/KGuQljI.png" alt="XRPSP Logo" class="w-12 h-12 rounded-md">
+      <h1 class="text-2xl">XRPSP Mobile Games</h1>
+    </header>
+
+    <!-- Search -->
+    <div class="max-w-md mx-auto mb-6">
+      <input id="searchBox" type="text" placeholder="Search games..." 
+             class="w-full px-4 py-3 rounded-lg text-black placeholder-gray-600 focus:outline-none" />
+    </div>
+
+    <!-- Games grid -->
+    <div id="gamesGrid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Card 1 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="Minecraft" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">Minecraft</h2>
+            <p class="text-gray-400 text-sm">Creative sandbox adventure.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="text-gray-300 text-sm">⚡ 500K</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="Roblox" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">Roblox</h2>
+            <p class="text-gray-400 text-sm">Play, create and explore user-made worlds.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★☆</div>
+          <div class="text-gray-300 text-sm">⚡ 800K</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="Subway Surfers" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">Subway Surfers</h2>
+            <p class="text-gray-400 text-sm">Endless runner with colorful levels.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="text-gray-300 text-sm">⚡ 700K</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="Free Fire" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">Free Fire</h2>
+            <p class="text-gray-400 text-sm">Fast-paced battle royale gameplay.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-2xl text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★☆</div>
+          <div class="text-gray-300 text-sm">⚡ 950K</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="PUBG Mobile" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">PUBG Mobile</h2>
+            <p class="text-gray-400 text-sm">Realistic battle royale combat.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="text-gray-300 text-sm">⚡ 2M</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="FIFA Mobile" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">FIFA Mobile</h2>
+            <p class="text-gray-400 text-sm">Realistic football simulation.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★☆</div>
+          <div class="text-gray-300 text-sm">⚡ 1.2M</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="eFootball" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">eFootball</h2>
+            <p class="text-gray-400 text-sm">Konami football experience.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★☆</div>
+          <div class="text-gray-300 text-sm">⚡ 870K</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="GTA San Andreas" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">GTA San Andreas</h2>
+            <p class="text-gray-400 text-sm">Open-world action classic.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="text-gray-300 text-sm">⚡ 1M</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="Clash of Clans" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">Clash of Clans</h2>
+            <p class="text-gray-400 text-sm">Build, battle and conquer villages.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-2xl text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★☆</div>
+          <div class="text-gray-300 text-sm">⚡ 3M</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="Clash Royale" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">Clash Royale</h2>
+            <p class="text-gray-400 text-sm">Card-based tower-battle gameplay.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★☆</div>
+          <div class="text-gray-300 text-sm">⚡ 2.5M</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 11 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="Among Us" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">Among Us</h2>
+            <p class="text-gray-400 text-sm">Find the imposter!</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★☆</div>
+          <div class="text-gray-300 text-sm">⚡ 1.8M</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 12 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="Call of Duty Mobile" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">Call of Duty Mobile</h2>
+            <p class="text-gray-400 text-sm">FPS & battle royale action.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-2xl text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="text-gray-300 text-sm">⚡ 5M</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 13 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="Brawl Stars" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">Brawl Stars</h2>
+            <p class="text-gray-400 text-sm">Fast-paced 3v3 battles.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs">#XRPSP</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <div class="text-yellow-400">★★★★☆</div>
+          <div class="text-gray-300 text-sm">⚡ 900K</div>
+        </div>
+        <button class="download-btn mt-4 block w-full bg-yellow-400 hover:bg-yellow-500 text-black py-2.5 rounded-xl">Download</button>
+      </div>
+
+      <!-- Card 14 -->
+      <div class="game-card bg-gray-800 rounded-2xl shadow-lg p-4">
+        <div class="flex items-start gap-3">
+          <img src="https://iili.io/KGT5CTx.jpg" alt="Pokemon GO" class="w-16 h-16 rounded-xl shadow-md object-cover">
+          <div class="flex-1">
+            <h2 class="text-lg game-title">Pokemon GO</h2>
+            <p class="text-gray-400 text-sm">AR exploration and catching Pokémon.</p>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs text-green-400 flex items-center gap-2">
+                <i class="fab fa-android"></i> ANDROID
+              </span>
+              <span class="px-2 py-1 bg-gray-700 rounded-lg text-xs flex items-center gap-2">
+                <i class="fab fa-apple"></i> IOS
+              </span>
+           
