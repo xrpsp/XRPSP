@@ -85,14 +85,30 @@
   </style>
 </head>
 <body>
-  <!-- استبدال العنوان بالصورة -->
-  <h1>
+
+  <h1 class="logo">
     <img src="https://i.postimg.cc/N0z9Dgkg/336ac5f75bc7a8cc159fd99c6c94f7aa.jpg" 
-         alt="Mobile Games Mod" 
-         style="width: 200px; height: auto;">
+         alt="Mobile Games Mod">
   </h1>
 
-  <div class="games-container">    <div class="game-card">
+  <div class="games-container">
+
+  <style>
+    .logo img {
+      width: 120px;       /* حجم أصغر */
+      height: auto;
+      border-radius: 10px; /* حواف ناعمة */
+      transition: 0.4s;    /* نعومة الحركة */
+      box-shadow: 0 0 10px #00eaff70; /* توهج خفيف */
+    }
+
+    .logo img:hover {
+      transform: scale(1.07);  /* تكبير بسيط عند المرور */
+      box-shadow: 0 0 20px #00eaff, 
+                  0 0 40px #00eaff; /* توهج قوي */
+    }
+  </style>
+    <div class="game-card">
   <img src="https://i.postimg.cc/CM86p5tx/baseball-9-pc-full-version.jpg" alt="Baseball9MOD">
   <h2>Baseball9MOD</h2>
   <a href="https://applocked.org/cl/i/j769mj" target="_blank">Play Now</a>
