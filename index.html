@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +42,7 @@ Self Driving Game Mobile,
 Open World Games Android
   ">
 
-  <!-- OG IMAGE (PFP for sharing & Google) -->
+  <!-- OG IMAGE -->
   <meta property="og:image" content="https://i.postimg.cc/156YN4gf/67fad16e593306dfeb6b5556393fe0c2.jpg">
   <meta property="og:title" content="Top Mobile Racing Games">
   <meta property="og:description" content="Play GTA 5 Mobile, Assetto Corsa Mobile, and Static Shift Racing – the best mobile racing experiences!">
@@ -53,6 +54,7 @@ Open World Games Android
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
+
     body {
       background: #0a0a0a;
       color: #fff;
@@ -84,6 +86,62 @@ Open World Games Android
       text-align: center;
     }
 
+    /* ----------- SEARCH BAR ----------- */
+    .search-wrapper {
+      position: relative;
+      width: 80%;
+      max-width: 500px;
+      margin-bottom: 35px;
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 12px 18px;
+      border: 2px solid #f5c542;
+      border-radius: 30px;
+      background: #111;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      box-shadow: 0 0 10px rgba(245, 197, 66, 0.3);
+      transition: 0.3s;
+    }
+
+    .search-bar:focus {
+      box-shadow: 0 0 15px rgba(245, 197, 66, 0.6);
+      border-color: #fff;
+    }
+
+    .suggestions-box {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      background: #1a1a1a;
+      border: 2px solid #f5c542;
+      border-radius: 15px;
+      list-style: none;
+      max-height: 220px;
+      overflow-y: auto;
+      padding: 0;
+      margin: 5px 0 0 0;
+      display: none;
+      z-index: 10;
+    }
+
+    .suggestions-box li {
+      padding: 12px;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.2s;
+    }
+
+    .suggestions-box li:hover {
+      background: #f5c542;
+      color: #000;
+    }
+
+    /* ----------- GAMES GRID ----------- */
     .games-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -91,6 +149,7 @@ Open World Games Android
       width: 100%;
       max-width: 1000px;
     }
+
     .game-card {
       background: rgba(255, 255, 255, 0.05);
       border-radius: 16px;
@@ -98,20 +157,24 @@ Open World Games Android
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
     }
+
     .game-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
     }
+
     .game-card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
     }
+
     .game-card h2 {
       font-size: 1.4rem;
       margin: 15px 0;
       color: #fff;
     }
+
     .game-card a {
       display: inline-block;
       background: #f5c542;
@@ -123,10 +186,12 @@ Open World Games Android
       margin-bottom: 20px;
       transition: background 0.3s ease;
     }
+
     .game-card a:hover {
       background: #fff;
       color: #000;
     }
+
     footer {
       margin-top: 60px;
       font-size: 0.9rem;
