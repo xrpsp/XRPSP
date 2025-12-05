@@ -7,306 +7,500 @@
 
   <!-- Script 2 -->
 <script src="https://3nbf4.com/act/files/tag.min.js?z=10279212" data-cfasync="false" async></script>
-
+  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>XRPSP — Mobile Game Download</title>
 
-  <!-- Essential SEO -->
-  <meta name="description" content="XRPSP — Download the latest trending mobile games like GTA 5 Mobile, BeamNG Drive Mobile, Assetto Corsa Mobile, CarX Street and more. Fast mobile-first game hub." />
-  <meta name="keywords" content="xrpsp, mobile games, gta 5 mobile apk, gta 5 mobile ios, beamng drive mobile, carx street mobile, assetto corsa mobile, game downloads, apk games, ios games" />
-  <link rel="canonical" href="https://xrpsp.com/" />
+  <!-- Primary SEO -->
+  <meta name="description" content="XRPSP — Mobile-first hub to download mobile game ports like GTA 5 Mobile, BeamNG Drive Mobile, Assetto Corsa Mobile and more. Fast, modern, and optimized for phones." />
+  <meta name="keywords" content="XRPSP, XRPSP games, download mobile games, gta 5 mobile apk, beamng drive mobile, carx street, mobile game ports" />
+  <meta name="author" content="XRPSP" />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://xrpsp.com/" />
 
-  <!-- Open Graph -->
+  <!-- Favicon / Profile image (used as logo/profile) -->
+  <link rel="icon" href="https://i.postimg.cc/rmxNP3wZ/ec8ea05d379666617c19b9cb79865d70.jpg" />
+  <link rel="apple-touch-icon" href="https://i.postimg.cc/rmxNP3wZ/ec8ea05d379666617c19b9cb79865d70.jpg" />
+
+  <!-- Open Graph & Twitter -->
+  <meta property="og:site_name" content="XRPSP" />
   <meta property="og:title" content="XRPSP — Mobile Game Downloads" />
-  <meta property="og:description" content="Mobile-first hub for downloading trending and ported mobile games." />
+  <meta property="og:description" content="XRPSP — Mobile-first hub to download mobile game ports and APKs." />
   <meta property="og:image" content="https://i.postimg.cc/PJMwXp59/9a7bbae3f5ef777e542288942c00e7ff.jpg" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://xrpsp.com/" />
-
-  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="XRPSP — Mobile Game Downloads" />
+  <meta name="twitter:description" content="XRPSP — Mobile-first hub to download mobile game ports and APKs." />
   <meta name="twitter:image" content="https://i.postimg.cc/PJMwXp59/9a7bbae3f5ef777e542288942c00e7ff.jpg" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://i.postimg.cc/J72M7Fr3/8faffb6bda27cb03e751fa19cd35a0e4.jpg" />
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://i.postimg.cc" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  </noscript>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- Sitemap hint -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <!-- Structured Data: WebSite + Organization + Breadcrumb + ItemList + VideoGame (one per game) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "XRPSP",
-    "url": "https://xrpsp.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://xrpsp.com/?search={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://xrpsp.com/#website",
+        "url": "https://xrpsp.com/",
+        "name": "XRPSP",
+        "description": "XRPSP — Mobile-first hub for downloading trending mobile games.",
+        "publisher": {
+          "@id": "https://xrpsp.com/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://xrpsp.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://xrpsp.com/#organization",
+        "name": "XRPSP",
+        "url": "https://xrpsp.com",
+        "logo": "https://i.postimg.cc/rmxNP3wZ/ec8ea05d379666617c19b9cb79865d70.jpg",
+        "sameAs": []
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://xrpsp.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Featured Games", "item": "https://xrpsp.com/#games" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "XRPSP - Mobile Game Downloads",
+        "itemListElement": [
+          { "@type":"ListItem","position":1,"name":"GTA 5 Mobile","url":"https://xrpsp.com/gta5mobile.html"},
+          { "@type":"ListItem","position":2,"name":"BeamNG Drive Mobile","url":"https://xrpsp.com/beamngdrive.html"},
+          { "@type":"ListItem","position":3,"name":"Assetto Corsa Mobile","url":"https://xrpsp.com/assettocorsa.html"},
+          { "@type":"ListItem","position":4,"name":"Red Dead Redemption Mobile","url":"https://xrpsp.com/reddeadredemption.html"},
+          { "@type":"ListItem","position":5,"name":"CarX Street","url":"https://xrpsp.com/carxstreet.html"},
+          { "@type":"ListItem","position":6,"name":"Where Winds Meet","url":"https://xrpsp.com/wherewindsmeet.html"}
+        ]
+      },
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "XRPSP Game List",
-    "itemListElement": [
-      {"@type":"ListItem","position":1,"name":"GTA 5 Mobile","url":"https://xrpsp.com/gta5mobile.html"},
-      {"@type":"ListItem","position":2,"name":"BeamNG Drive Mobile","url":"https://xrpsp.com/beamngdrive.html"},
-      {"@type":"ListItem","position":3,"name":"Assetto Corsa Mobile","url":"https://xrpsp.com/assettocorsa.html"},
-      {"@type":"ListItem","position":4,"name":"Red Dead Redemption Mobile","url":"https://xrpsp.com/reddeadredemption.html"},
-      {"@type":"ListItem","position":5,"name":"CarX Street","url":"https://xrpsp.com/carxstreet.html"},
-      {"@type":"ListItem","position":6,"name":"Where Winds Meet","url":"https://xrpsp.com/wherewindsmeet.html"}
+      /* VideoGame items: improves appearance in search for each game */
+      {
+        "@type": "VideoGame",
+        "name": "GTA 5 Mobile",
+        "image": "https://i.postimg.cc/PJMwXp59/9a7bbae3f5ef777e542288942c00e7ff.jpg",
+        "url": "https://xrpsp.com/gta5mobile.html",
+        "genre": ["Open World","Action"],
+        "applicationCategory": "GameApplication",
+        "gamePlatform": ["Android"],
+        "operatingSystem": "Android",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "VideoGame",
+        "name": "BeamNG Drive Mobile",
+        "image": "https://i.postimg.cc/SsBr2MqS/beamng-drive-mobile-logo.webp",
+        "url": "https://xrpsp.com/beamngdrive.html",
+        "genre": ["Racing","Simulation"],
+        "applicationCategory": "GameApplication",
+        "gamePlatform": ["Android"],
+        "operatingSystem": "Android",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Assetto Corsa Mobile",
+        "image": "https://i.postimg.cc/ZqgP2dWL/assetto-corsa-mobile.webp",
+        "url": "https://xrpsp.com/assettocorsa.html",
+        "genre": ["Racing","Simulation"],
+        "applicationCategory": "GameApplication",
+        "gamePlatform": ["Android"],
+        "operatingSystem": "Android",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Red Dead Redemption Mobile",
+        "image": "https://i.postimg.cc/tJFcRQfg/00bd08cf240ede27e4354d3fc7a5b867190df853940366ec.jpg",
+        "url": "https://xrpsp.com/reddeadredemption.html",
+        "genre": ["Open World","Action"],
+        "applicationCategory": "GameApplication",
+        "gamePlatform": ["Android"],
+        "operatingSystem": "Android",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "VideoGame",
+        "name": "CarX Street",
+        "image": "https://i.postimg.cc/15cHXXdy/9104321a5f1583f38ca2eb131fca71d4.jpg",
+        "url": "https://xrpsp.com/carxstreet.html",
+        "genre": ["Racing","Arcade"],
+        "applicationCategory": "GameApplication",
+        "gamePlatform": ["Android"],
+        "operatingSystem": "Android",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Where Winds Meet",
+        "image": "https://i.postimg.cc/pdqCZXNj/2c1bd60aa241684e2af8f2b910458e9f.jpg",
+        "url": "https://xrpsp.com/wherewindsmeet.html",
+        "genre": ["Adventure","Casual"],
+        "applicationCategory": "GameApplication",
+        "gamePlatform": ["Android"],
+        "operatingSystem": "Android",
+        "inLanguage": "en"
+      }
     ]
   }
   </script>
 
+  <!-- Core styles (kept readable but optimized) -->
   <style>
     :root{
       --bg:#071026;
-      --surface:#0b1420;
       --muted:#9bb0c2;
       --accent1:#00b4d8;
       --accent2:#7b61ff;
       --glass: rgba(255,255,255,0.03);
       --radius:14px;
-      font-family: Inter, system-ui;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       color-scheme: dark;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
     *{box-sizing:border-box}
+    html,body{height:100%; margin:0}
     body{
-      margin:0;
       background: linear-gradient(180deg,var(--bg) 0%, #031021 80%);
-      color:#e6eef6;
-      padding-bottom:90px;
-      -webkit-font-smoothing:antialiased;
+      color:#e6eef6; line-height:1.35; font-size:15px; padding-bottom:88px;
     }
-
-    /* HEADER */
+    a{ color:inherit; text-decoration:none }
     header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      padding:12px 14px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      background:rgba(4,10,20,0.6);
-      backdrop-filter:blur(7px);
-      border-bottom:1px solid rgba(255,255,255,0.05);
+      position:sticky; top:0; z-index:60; display:flex; align-items:center; justify-content:space-between;
+      padding:12px 14px; gap:12px; background: linear-gradient(180deg, rgba(2,6,12,0.6), rgba(2,6,12,0.2));
+      border-bottom:1px solid rgba(255,255,255,0.03); backdrop-filter: blur(6px);
     }
-    .brand{
-      display:flex; gap:10px; align-items:center;
-      color:inherit; text-decoration:none;
+    .brand{ display:flex; gap:10px; align-items:center; text-decoration:none; color:inherit; }
+    .logo{ width:44px; height:44px; border-radius:10px; display:grid; place-items:center; font-weight:800;
+      background: linear-gradient(135deg,var(--accent1),var(--accent2)); box-shadow: 0 8px 26px rgba(123,97,255,0.12); font-size:16px; }
+    .brand h1{ margin:0; font-size:16px; }
+    .brand .tag{ font-size:12px; color:var(--muted); margin-top:2px; }
+
+    .hero{ max-width:980px; margin:14px auto 6px; padding:16px; border-radius:12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); box-shadow: 0 8px 30px rgba(2,6,12,0.6); }
+    .hero-left{ flex:1; min-width:0 }
+    h2.hero-title{ margin:0 0 6px; font-size:18px; line-height:1.15; }
+    p.hero-sub{ margin:0; color:var(--muted); font-size:13px; }
+
+    .search-row{ display:flex; gap:8px; margin-top:12px; align-items:center; }
+    .search{ flex:1; display:flex; align-items:center; gap:8px; padding:8px 10px; border-radius:12px; background:var(--glass); border:1px solid rgba(255,255,255,0.03); }
+    .search input{ background:transparent; border:0; outline:none; color:inherit; font-size:14px; width:100% }
+
+    .btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px; font-weight:700; cursor:pointer; color:#02111a; background: linear-gradient(90deg,var(--accent1),var(--accent2)); border:0; }
+    .btn.ghost{ background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.03) }
+
+    .games-wrap{ max-width:980px; margin:12px auto; padding:6px 12px; }
+    .grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; align-items:start; }
+
+    .card{ background: linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.006)); border-radius:16px; padding:10px; border:1px solid rgba(255,255,255,0.03); display:flex; flex-direction:column; gap:10px; align-items:stretch; transition: transform .14s ease, box-shadow .14s ease; will-change:transform; overflow:hidden; }
+    .card:focus-within, .card:hover{ transform: translateY(-6px); box-shadow: 0 14px 40px rgba(123,97,255,0.08); }
+
+    .card .thumb{ width:100%; aspect-ratio: 1 / 1; border-radius:12px; overflow:hidden; display:block; background:#07121b; box-shadow: inset 0 -6px 24px rgba(255,255,255,0.02); }
+    .thumb img{ width:100%; height:100%; object-fit:cover; display:block; transform-origin:center center; transition: transform .45s ease; }
+    .card:hover .thumb img{ transform: scale(1.04); }
+
+    .card .body{ display:flex; flex-direction:column; gap:8px; align-items:stretch; text-align:left; }
+    .card h3{ margin:0; font-size:15px; }
+    .card p{ margin:0; color:var(--muted); font-size:13px; }
+
+    .actions{ display:flex; gap:8px; align-items:center; justify-content:space-between; margin-top:6px; }
+    .badge{ padding:6px 8px; border-radius:999px; background:rgba(255,255,255,0.02); color:var(--muted); font-size:12px; border:1px solid rgba(255,255,255,0.03); }
+
+    footer{ position:fixed; left:0; right:0; bottom:0; z-index:80; padding:10px; background: linear-gradient(180deg, rgba(2,6,12,0.4), rgba(2,6,12,0.6)); border-top:1px solid rgba(255,255,255,0.03); display:flex; justify-content:center; }
+    .footer-inner{ max-width:980px; width:100%; display:flex; gap:12px; align-items:center; justify-content:space-between; color:var(--muted); font-size:13px; padding:6px 8px; }
+    .download-fixed{ display:flex; gap:8px; align-items:center; }
+
+    @media (min-width:900px){
+      .grid{ grid-template-columns: repeat(4, 1fr); gap:16px; }
+      .hero{ margin:28px auto; padding:20px; border-radius:16px; }
+      .card{ padding:12px; }
+      .card h3{ font-size:16px; text-align:center; }
+      .card p{ text-align:center; }
+      .actions{ justify-content:center; }
+      footer{ padding:14px 0; }
     }
 
-    /* NEW LOGO IMAGE */
-    .logo{
-      width:44px;
-      height:44px;
-      border-radius:10px;
-      display:block;
-      overflow:hidden;
-      box-shadow:0 8px 26px rgba(123,97,255,0.12);
-    }
-    .logo img{
-      width:100%; height:100%;
-      object-fit:cover; border-radius:10px;
+    @media (prefers-reduced-motion: reduce) {
+      .card, .thumb img { transition: none !important; animation: none !important; }
     }
 
-    .brand h1{ margin:0; font-size:17px; font-weight:700; }
-    .tag{ font-size:12px; color:var(--muted); margin-top:2px; }
-
-    .btn{
-      padding:10px 13px; border-radius:12px;
-      background: linear-gradient(90deg,var(--accent1),var(--accent2));
-      text-decoration:none; color:#02121a; font-weight:600;
-      display:inline-flex; align-items:center; justify-content:center;
-      box-shadow:0 10px 28px rgba(0,180,216,0.08);
-    }
-    .btn.ghost{
-      background:transparent; color:var(--muted);
-      border:1px solid rgba(255,255,255,0.05);
-    }
-
-    /* HERO */
-    .hero{
-      max-width:1000px; margin:14px auto; padding:18px;
-      background:rgba(255,255,255,0.015);
-      border-radius:14px;
-    }
-
-    /* GRID */
-    .games-wrap{ max-width:1000px; margin:12px auto; padding:12px; }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:12px;
-    }
-    @media(min-width:900px){
-      .grid{ grid-template-columns:repeat(4,1fr); }
-    }
-
-    .card{
-      background:rgba(255,255,255,0.02);
-      border-radius:16px;
-      padding:10px;
-      border:1px solid rgba(255,255,255,0.04);
-      transition:.2s;
-      overflow:hidden;
-    }
-    .card:hover{ transform:translateY(-5px); }
-
-    .thumb{
-      width:100%;
-      aspect-ratio:1/1;
-      border-radius:12px;
-      overflow:hidden;
-    }
-    .thumb img{ width:100%; height:100%; object-fit:cover; }
-
-    .actions{ display:flex; justify-content:space-between; margin-top:7px; }
-    .badge{
-      padding:6px 8px;
-      border-radius:20px;
-      background:rgba(255,255,255,0.03);
-      border:1px solid rgba(255,255,255,0.05);
-      font-size:12px; color:var(--muted);
-    }
-
-    /* FOOTER */
-    footer{
-      position:fixed; bottom:0; left:0; right:0;
-      padding:12px;
-      background:rgba(4,10,20,0.65);
-      backdrop-filter:blur(8px);
-      border-top:1px solid rgba(255,255,255,0.05);
-    }
-    .footer-inner{
-      max-width:1000px; margin:auto;
-      display:flex; justify-content:space-between;
-      color:var(--muted);
-    }
+    .muted{ color:var(--muted) }
   </style>
 </head>
 
 <body>
-  <header>
-    <a class="brand" href="/">
-      <div class="logo">
-        <img src="https://i.postimg.cc/J72M7Fr3/8faffb6bda27cb03e751fa19cd35a0e4.jpg" alt="XRPSP Logo">
-      </div>
-      <div>
-        <h1>XRPSP</h1>
-        <div class="tag">Mobile Game Download</div>
-      </div>
-    </a>
+  <!-- Skip link for keyboard users -->
+  <a href="#maincontent" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden" class="skip">Skip to content</a>
 
-    <div style="display:flex; gap:8px;">
-      <button class="btn ghost">Filters</button>
-      <a class="btn" href="#games">Browse</a>
+  <header>
+  <a class="brand" href="/">
+    <div class="logo">
+      <img src="https://i.postimg.cc/J72M7Fr3/8faffb6bda27cb03e751fa19cd35a0e4.jpg" alt="XR Logo">
     </div>
+    <div>
+      <h1>XRPSP</h1>
+      <div class="tag">Mobile Game Downloads</div>
+    </div>
+  </a>
+
+  <div style="display:flex; gap:8px;">
+    <button class="btn ghost">Filters</button>
+    <a class="btn" href="#games">Browse</a>
+  </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2 style="margin:0 0 8px">XRPSP — Mobile-first Game Downloads</h2>
-      <p style="margin:0; color:var(--muted)">Discover trending mobile games, ports, open world titles and racing simulations optimized for smartphones.</p>
+  <main id="maincontent" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-row">
+        <div class="hero-left">
+          <h2 class="hero-title" id="hero-title">XRPSP — Mobile-first Game Downloads</h2>
+          <p class="hero-sub">Large square game cards, optimized for phones. Tap preview or go straight to download.</p>
+
+          <div class="search-row" style="margin-top:12px">
+            <div class="search" role="search" aria-label="Search games">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.35-4.35" stroke="white" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <input id="searchInput" placeholder="Search (GTA, racing, open world...)" aria-label="Search games" />
+            </div>
+            <button class="btn" onclick="document.getElementById('games').scrollIntoView({behavior:'smooth'})">View</button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="games" class="games-wrap">
-      <h2 style="text-align:center; margin:10px 0">Featured Games</h2>
+    <section id="games" class="games-wrap" aria-labelledby="games-title">
+      <h2 id="games-title" style="margin:6px 0 10px; font-size:16px; text-align:center">Featured Games</h2>
 
-      <div class="grid">
+      <div id="filtersPanel" style="display:flex; gap:8px; align-items:center; justify-content:center; margin-bottom:10px; flex-wrap:wrap;">
+        <button class="badge" id="filterAll" aria-pressed="true">All</button>
+        <button class="badge" data-filter="racing">Racing</button>
+        <button class="badge" data-filter="openworld">Open World</button>
+        <div style="min-width:12px"></div>
+        <div class="muted">Showing <span id="count">6</span></div>
+      </div>
 
-        <!-- GTA 5 -->
-        <article class="card">
-          <a class="thumb" href="https://xrpsp.com/gta5mobile.html">
-            <img src="https://i.postimg.cc/PJMwXp59/9a7bbae3f5ef777e542288942c00e7ff.jpg" loading="lazy">
+      <div class="grid" id="gamesGrid" aria-live="polite">
+        <!-- Card: use <picture> to prioritize WebP, fallback to original -->
+        <article class="card" data-name="GTA 5 Mobile" data-tags="openworld action" tabindex="0" aria-labelledby="gta-title">
+          <a class="thumb" href="https://xrpsp.com/gta5mobile.html" title="GTA 5 Mobile">
+            <picture>
+              <source srcset="https://i.postimg.cc/PJMwXp59/9a7bbae3f5ef777e542288942c00e7ff.jpg" type="image/jpeg">
+              <img src="https://i.postimg.cc/PJMwXp59/9a7bbae3f5ef777e542288942c00e7ff.jpg" alt="GTA 5 Mobile cover art" loading="lazy" width="600" height="600" decoding="async" fetchpriority="low">
+            </picture>
           </a>
-          <h3>GTA 5 Mobile</h3>
-          <div class="actions">
-            <span class="badge">APK • 1.8GB</span>
-            <a class="btn" href="https://xrpsp.com/gta5mobile.html">Download</a>
+          <div class="body">
+            <h3 id="gta-title">GTA 5 Mobile</h3>
+            <p class="muted">Open world action. Mobile-optimized build.</p>
+            <div class="actions">
+              <div class="left"><span class="badge">APK • 1.8 GB</span></div>
+              <a class="btn" href="https://xrpsp.com/gta5mobile.html" rel="noopener" aria-label="Download GTA 5 Mobile">Download</a>
+            </div>
           </div>
         </article>
 
-        <!-- BeamNG -->
-        <article class="card">
-          <a class="thumb" href="https://xrpsp.com/beamngdrive.html">
-            <img src="https://i.postimg.cc/SsBr2MqS/beamng-drive-mobile-logo.webp" loading="lazy">
+        <article class="card" data-name="BeamNG Drive Mobile" data-tags="racing simulation" tabindex="0" aria-labelledby="beamng-title">
+          <a class="thumb" href="https://xrpsp.com/beamngdrive.html" title="BeamNG Drive Mobile">
+            <picture>
+              <source srcset="https://i.postimg.cc/SsBr2MqS/beamng-drive-mobile-logo.webp" type="image/webp">
+              <img src="https://i.postimg.cc/SsBr2MqS/beamng-drive-mobile-logo.webp" alt="BeamNG Drive Mobile art" loading="lazy" width="600" height="600" decoding="async" fetchpriority="low">
+            </picture>
           </a>
-          <h3>BeamNG Drive Mobile</h3>
-          <div class="actions">
-            <span class="badge">APK • 1.2GB</span>
-            <a class="btn" href="https://xrpsp.com/beamngdrive.html">Download</a>
+          <div class="body">
+            <h3 id="beamng-title">BeamNG Drive Mobile</h3>
+            <p class="muted">Soft-body physics driving simulation adapted for mobiles.</p>
+            <div class="actions">
+              <div class="left"><span class="badge">APK • 1.2 GB</span></div>
+              <a class="btn" href="https://xrpsp.com/beamngdrive.html" rel="noopener" aria-label="Download BeamNG Drive Mobile">Download</a>
+            </div>
           </div>
         </article>
 
-        <!-- Assetto Corsa -->
-        <article class="card">
-          <a class="thumb" href="https://xrpsp.com/assettocorsa.html">
-            <img src="https://i.postimg.cc/ZqgP2dWL/assetto-corsa-mobile.webp" loading="lazy">
+        <article class="card" data-name="Assetto Corsa Mobile" data-tags="racing simulation" tabindex="0" aria-labelledby="assetto-title">
+          <a class="thumb" href="https://xrpsp.com/assettocorsa.html" title="Assetto Corsa Mobile">
+            <picture>
+              <source srcset="https://i.postimg.cc/ZqgP2dWL/assetto-corsa-mobile.webp" type="image/webp">
+              <img src="https://i.postimg.cc/ZqgP2dWL/assetto-corsa-mobile.webp" alt="Assetto Corsa Mobile art" loading="lazy" width="600" height="600" decoding="async" fetchpriority="low">
+            </picture>
           </a>
-          <h3>Assetto Corsa Mobile</h3>
-          <div class="actions">
-            <span class="badge">APK • 1.1GB</span>
-            <a class="btn" href="https://xrpsp.com/assettocorsa.html">Download</a>
+          <div class="body">
+            <h3 id="assetto-title">Assetto Corsa Mobile</h3>
+            <p class="muted">Realistic racing physics and tracks.</p>
+            <div class="actions">
+              <div class="left"><span class="badge">APK • 1.1 GB</span></div>
+              <a class="btn" href="https://xrpsp.com/assettocorsa.html" rel="noopener" aria-label="Download Assetto Corsa Mobile">Download</a>
+            </div>
           </div>
         </article>
 
-        <!-- RDR -->
-        <article class="card">
-          <a class="thumb" href="https://xrpsp.com/reddeadredemption.html">
-            <img src="https://i.postimg.cc/tJFcRQfg/00bd08cf240ede27e4354d3fc7a5b867190df853940366ec.jpg" loading="lazy">
+        <article class="card" data-name="Red Dead Redemption Mobile" data-tags="openworld action" tabindex="0" aria-labelledby="rdr-title">
+          <a class="thumb" href="https://xrpsp.com/reddeadredemption.html" title="Red Dead Redemption Mobile">
+            <picture>
+              <source srcset="https://i.postimg.cc/tJFcRQfg/00bd08cf240ede27e4354d3fc7a5b867190df853940366ec.jpg" type="image/jpeg">
+              <img src="https://i.postimg.cc/tJFcRQfg/00bd08cf240ede27e4354d3fc7a5b867190df853940366ec.jpg" alt="Red Dead Redemption Mobile art" loading="lazy" width="600" height="600" decoding="async" fetchpriority="low">
+            </picture>
           </a>
-          <h3>Red Dead Redemption Mobile</h3>
-          <div class="actions">
-            <span class="badge">APK • 1.9GB</span>
-            <a class="btn" href="https://xrpsp.com/reddeadredemption.html">Download</a>
+          <div class="body">
+            <h3 id="rdr-title">Red Dead Redemption Mobile</h3>
+            <p class="muted">Western open-world adventure on mobile.</p>
+            <div class="actions">
+              <div class="left"><span class="badge">APK • 1.9 GB</span></div>
+              <a class="btn" href="https://xrpsp.com/reddeadredemption.html" rel="noopener" aria-label="Download Red Dead Redemption Mobile">Download</a>
+            </div>
           </div>
         </article>
 
-        <!-- CarX Street -->
-        <article class="card">
-          <a class="thumb" href="https://xrpsp.com/carxstreet.html">
-            <img src="https://i.postimg.cc/15cHXXdy/9104321a5f1583f38ca2eb131fca71d4.jpg" loading="lazy">
+        <article class="card" data-name="CarX Street" data-tags="racing arcade" tabindex="0" aria-labelledby="carx-title">
+          <a class="thumb" href="https://xrpsp.com/carxstreet.html" title="CarX Street">
+            <picture>
+              <source srcset="https://i.postimg.cc/15cHXXdy/9104321a5f1583f38ca2eb131fca71d4.jpg" type="image/jpeg">
+              <img src="https://i.postimg.cc/15cHXXdy/9104321a5f1583f38ca2eb131fca71d4.jpg" alt="CarX Street cover" loading="lazy" width="600" height="600" decoding="async" fetchpriority="low">
+            </picture>
           </a>
-          <h3>CarX Street</h3>
-          <div class="actions">
-            <span class="badge">APK • 900MB</span>
-            <a class="btn" href="https://xrpsp.com/carxstreet.html">Download</a>
+          <div class="body">
+            <h3 id="carx-title">CarX Street</h3>
+            <p class="muted">High-speed street racing optimized for phones.</p>
+            <div class="actions">
+              <div class="left"><span class="badge">APK • 900 MB</span></div>
+              <a class="btn" href="https://xrpsp.com/carxstreet.html" rel="noopener" aria-label="Download CarX Street">Download</a>
+            </div>
           </div>
         </article>
 
-        <!-- Where Winds Meet -->
-        <article class="card">
-          <a class="thumb" href="https://xrpsp.com/wherewindsmeet.html">
-            <img src="https://i.postimg.cc/pdqCZXNj/2c1bd60aa241684e2af8f2b910458e9f.jpg" loading="lazy">
+        <article class="card" data-name="Where Winds Meet" data-tags="adventure casual" tabindex="0" aria-labelledby="winds-title">
+          <a class="thumb" href="https://xrpsp.com/wherewindsmeet.html" title="Where Winds Meet">
+            <picture>
+              <source srcset="https://i.postimg.cc/pdqCZXNj/2c1bd60aa241684e2af8f2b910458e9f.jpg" type="image/jpeg">
+              <img src="https://i.postimg.cc/pdqCZXNj/2c1bd60aa241684e2af8f2b910458e9f.jpg" alt="Where Winds Meet art" loading="lazy" width="600" height="600" decoding="async" fetchpriority="low">
+            </picture>
           </a>
-          <h3>Where Winds Meet</h3>
-          <div class="actions">
-            <span class="badge">APK • 420MB</span>
-            <a class="btn" href="https://xrpsp.com/wherewindsmeet.html">Download</a>
+          <div class="body">
+            <h3 id="winds-title">Where Winds Meet</h3>
+            <p class="muted">Relaxing adventure with low graphics for smooth mobile play.</p>
+            <div class="actions">
+              <div class="left"><span class="badge">APK • 420 MB</span></div>
+              <a class="btn" href="https://xrpsp.com/wherewindsmeet.html" rel="noopener" aria-label="Download Where Winds Meet">Download</a>
+            </div>
           </div>
         </article>
 
       </div>
+    </section>
+
+    <section style="max-width:980px;margin:12px auto;padding:10px;color:var(--muted)">
+      <p style="margin:0">Tip: Tap a card to preview details or press the Download button to go to the game page. Images are lazy-loaded for faster mobile performance.</p>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <div>© <span id="year"></span> XRPSP — Mobile-first</div>
-      <a class="btn" href="#games">Open Games</a>
+      <div>
+        <strong>XRPSP</strong> — © <span id="year"></span>
+        <div class="muted">Mobile-first • Fast downloads</div>
+      </div>
+      <div class="download-fixed">
+        <a class="btn" href="#games" aria-label="Open games">Open Games</a>
+      </div>
     </div>
   </footer>
 
+  <!-- Lightweight JS (deferred execution is not needed because inline and small) -->
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Accessibility helper: focus main on skip
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Intersection reveal (light)
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(ent=>{
+        if(ent.isIntersecting){
+          ent.target.style.opacity = 1;
+          ent.target.style.transform = 'none';
+          io.unobserve(ent.target);
+        }
+      });
+    }, {threshold:0.12});
+    cards.forEach(c=>{
+      c.style.opacity = 0;
+      c.style.transform = 'translateY(8px)';
+      io.observe(c);
+    });
+
+    // Search
+    const search = document.getElementById('searchInput');
+    const gridCards = cards;
+    const countEl = document.getElementById('count');
+    function updateCount(){ countEl.textContent = gridCards.filter(c=>!c.hidden).length; }
+    search.addEventListener('input', (e)=>{
+      const q = e.target.value.trim().toLowerCase();
+      gridCards.forEach(c=>{
+        const name = c.dataset.name.toLowerCase();
+        const tags = (c.dataset.tags||'').toLowerCase();
+        c.hidden = q !== '' && !(name.includes(q) || tags.includes(q));
+      });
+      updateCount();
+    });
+    updateCount();
+
+    // Filters
+    document.querySelectorAll('[data-filter]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const f = btn.dataset.filter;
+        gridCards.forEach(c=>{
+          c.hidden = !(c.dataset.tags||'').includes(f);
+        });
+        document.getElementById('filterAll').setAttribute('aria-pressed','false');
+        document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed','false'));
+        btn.setAttribute('aria-pressed','true');
+        updateCount();
+      });
+    });
+    document.getElementById('filterAll').addEventListener('click', ()=>{
+      gridCards.forEach(c=>c.hidden=false);
+      document.getElementById('filterAll').setAttribute('aria-pressed','true');
+      document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed','false'));
+      updateCount();
+    });
+
+    // Keyboard: Enter opens first link in card
+    gridCards.forEach(card=>{
+      card.addEventListener('keydown', (ev)=>{
+        if(ev.key === 'Enter'){
+          const a = card.querySelector('a[href]');
+          if(a) a.click();
+        }
+      });
+    });
+
+    // Preconnect is already added in head. Respect reduced motion.
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      gridCards.forEach(c=>{ c.style.transition='none'; c.style.transform='none'; });
+    }
   </script>
 
+  <!-- Robots / Crawlers hint (inline) -->
+  <noscript>
+    <style>
+      .thumb img { opacity:1 !important; transform:none !important; }
+    </style>
+  </noscript>
 </body>
 </html>
