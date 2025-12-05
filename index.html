@@ -253,21 +253,25 @@
   <a href="#maincontent" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden" class="skip">Skip to content</a>
 
   <header>
-  <a class="brand" href="/">
-    <div class="logo">
-      <img src="https://i.postimg.cc/J72M7Fr3/8faffb6bda27cb03e751fa19cd35a0e4.jpg" alt="XR Logo">
+  <a class="brand" href="/" aria-label="XRPSP Home">
+    
+    <div class="logo" aria-hidden="true" style="overflow:hidden; padding:0;">
+      <img src="https://i.postimg.cc/J72M7Fr3/8faffb6bda27cb03e751fa19cd35a0e4.jpg"
+           alt="XR Logo"
+           style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
     </div>
+
     <div>
       <h1>XRPSP</h1>
-      <div class="tag">Mobile Game Downloads</div>
+      <div class="tag muted">Mobile Game Download</div>
     </div>
   </a>
 
-  <div style="display:flex; gap:8px;">
-    <button class="btn ghost">Filters</button>
+  <div style="display:flex; gap:8px; align-items:center;">
+    <button class="btn ghost" id="openFilters" aria-expanded="false" aria-controls="filtersPanel">Filters</button>
     <a class="btn" href="#games">Browse</a>
   </div>
-  </header>
+</header>
 
   <main id="maincontent" tabindex="-1">
     <section class="hero" aria-labelledby="hero-title">
